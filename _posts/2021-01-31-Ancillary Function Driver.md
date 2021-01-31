@@ -38,7 +38,6 @@ Once the Execution is started :
 After command execution , it will list the loaded drivers with there memory addresses in kernel mode.
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/afd/1.png)
-![](https://github.com/yashomer1994/yash007.github.io/assets/afd/1.png)
 
 
 2. We identified the Entry of "**ntoskrnl.exe**" or "**ntkrnlpa**" in the list the memory is loaded in the kernel space from "**“_SYSTEM_MODULE_INFORMATION**".
