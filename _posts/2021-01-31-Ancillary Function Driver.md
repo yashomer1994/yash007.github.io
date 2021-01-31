@@ -8,20 +8,20 @@ published: true
 
 Started the kernel fuzzing in Windows Server 2008 R2 , 32-Bit. I identified this version of windows using vulnerable or unpatched version of Ancillary Function Driver(AFD).
 
-----
+---
 [](#header-1)**Definition**
 ---
 
 The ancillary function driver supports windows sockets application in the afd.sys file. The afd.sys driver runs in a kernel mode and manages the Winsock TCP/IP communication protocols.
 
-----
+---
 [](#header-2)**Analysis**
 ---
 
 Major Flaw in AFD Driver is it was improperly validating input passed from the user mode to the kernel mode, through which any user can get Administrator Rights.
 For exploiting this vulnerability , the user should have Login Credentials as a Local User.
 
-----
+---
  [](#header-3)**Bug Mechanism**
 ---
 
@@ -50,7 +50,7 @@ Instructions are used to get the “**HalDispatchTable +4**” in module “ntkr
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/afd/4.png)
 
-----
+---
  [](#header-4)**Exploit**
 ---
 
@@ -138,7 +138,7 @@ API CALL “**NtDeviceIoControlFile**” will lead to arbitrary memory overwrite
 ![](https://yashomer1994.github.io/yash007.github.io/assets/afd/8.png)
 
 
-----
+---
  [](#header-5)**Proof Of Concept**
 ---
 
