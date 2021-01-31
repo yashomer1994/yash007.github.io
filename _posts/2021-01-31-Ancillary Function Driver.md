@@ -58,16 +58,15 @@ Instructions are used to get the “**HalDispatchTable +4**” in module “ntkr
 
 Code is used to Perform the Hook:
 
-    /*
+    
     	MOV BYTE PTR DS:[ESI],68
 
-    ESI points to start of the address of NtDeviceIoControlFile
+    /* ESI points to start of the address of NtDeviceIoControlFile */
 
         MOV DWORD PTR DR:[ESI+1],
         MOV BYTE PTR DR:[ESI+5]
 
-     Above instructions used to inject instructions in to the address space of NtDeviceIoControlFile
-     */ 
+    /* Above instructions used to inject instructions in to the address space of NtDeviceIoControlFile */
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/afd/5.png)
 
