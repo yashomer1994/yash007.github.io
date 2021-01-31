@@ -38,18 +38,16 @@ After command execution , it will list the loaded drivers with there memory addr
 
 2. We identified the Entry of "**ntoskrnl.exe**" or "**ntkrnlpa**" in the list the memory is loaded in the kernel space from "**“_SYSTEM_MODULE_INFORMATION**".
 
-
-            ![](https://github.com/yashomer1994/yash007.github.io/assets/afd/2.png)
+![](https://yashomer1994.github.io/yash007.github.io/assets/afd/2.png)
 
 3. **LoadLibrary()** will Load the module in user mode and start searching for the address of "**HalfDispatchTable**".
 
-            ![](https://github.com/yashomer1994/yash007.github.io/assets/afd/3.png)
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/afd/3.png)
 
 4. Instructions are used to get the “**HalDispatchTable +4**” in module “ntkrnlpa.exe” in kernel space.
 
-            ![](https://github.com/yashomer1994/yash007.github.io/assets/afd/4.png)
-
-
+![](https://yashomer1994.github.io/yash007.github.io/assets/afd/4.png)
 
 ----
  [](#header-4)**Exploit**
