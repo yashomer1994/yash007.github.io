@@ -86,15 +86,18 @@ The address <zero.loc_401640> points to the hook routine which will be executed 
 
     /* contains values 8053513c (address of HalDispatchTable + $4) */
 
-    
-    MOV DWORD PTR SS:[ESP+24],EAX
+        MOV DWORD PTR SS:[ESP+24],EAX
 
     /* output buffer for NtDeviceIoControlFile, the address now point to 8053513c*/
 
-    
     MOV DWORD PTR SS:[ESP+80], 0
 
     /* The length of output buffer is set to 0  */
+
+    LEA EAX DWORD PTR DS:[40FA78]
+
+    /* Location of the original NtDeviceControlFile which gets executed next. */
+
 
 
 
