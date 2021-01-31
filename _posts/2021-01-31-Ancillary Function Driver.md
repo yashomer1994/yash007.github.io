@@ -98,6 +98,10 @@ The address <zero.loc_401640> points to the hook routine which will be executed 
 
     /* Location of the original NtDeviceControlFile which gets executed next. */
 
+    PUSH EAX
+    RETN
+
+
 
 
 
