@@ -69,6 +69,14 @@ Code is used to Perform the Hook:
      Above instructions used to inject instructions in to the address space of NtDeviceIoControlFile
      */ 
 
+![](https://yashomer1994.github.io/yash007.github.io/assets/afd/5.png)
+
+
+    PUSH <zero.loc_401640>
+    RETN 
+
+
+
 
 
 
