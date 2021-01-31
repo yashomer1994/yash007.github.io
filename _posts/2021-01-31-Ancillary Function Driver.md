@@ -4,7 +4,9 @@ title: Ancillary Function Driver
 date:   2021-01-31
 categories:  PE MSDOS
 published: true
---
+---
+
+
 ----
  [](#header-1)**Background**
 ----
@@ -39,7 +41,6 @@ After command execution , it will list the loaded drivers with there memory addr
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/afd/1.png)
 
-
 2. We identified the Entry of "**ntoskrnl.exe**" or "**ntkrnlpa**" in the list the memory is loaded in the kernel space from "**“_SYSTEM_MODULE_INFORMATION**".
 
 
@@ -53,7 +54,7 @@ After command execution , it will list the loaded drivers with there memory addr
 
             ![](https://github.com/yashomer1994/yash007.github.io/assets/afd/4.png)
 
-----
+
 
 ----
  [](#header-5)**Exploit**
