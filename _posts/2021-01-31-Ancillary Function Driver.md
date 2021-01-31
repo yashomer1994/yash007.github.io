@@ -24,6 +24,7 @@ For exploiting this vulnerability , the user should have Login Credentials as a 
 ----
  [](#header-3)**Bug Mechanism**
 ---- 
+
 Once Execution is done , Process waits for a user to enter an argument, with successfull execution of a process, user will able to exploit Privilege Escalation.
 
 ***BUG***
@@ -40,8 +41,8 @@ We identified the Entry of "**ntoskrnl.exe**" or "**ntkrnlpa**" in the list the 
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/afd/2.png)
 
-**LoadLibrary()** will Load the module in user mode and start searching for the address of "**HalfDispatchTable**".
 
+**LoadLibrary()** will Load the module in user mode and start searching for the address of "**HalfDispatchTable**".
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/afd/3.png)
 
@@ -53,7 +54,7 @@ Instructions are used to get the “**HalDispatchTable +4**” in module “ntkr
  [](#header-4)**Exploit**
 ---- 
 
-1.The exploit will start by fetching the address to “NtDeviceIoControlFile” API from NTDLL. Once the address is fetched it performs an inline function hooks to the API.
+1. The exploit will start by fetching the address to “NtDeviceIoControlFile” API from NTDLL. Once the address is fetched it performs an inline function hooks to the API.
 
 Code is used to Perform the Hook:
 
