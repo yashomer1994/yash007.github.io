@@ -101,6 +101,51 @@ The address <zero.loc_401640> points to the hook routine which will be executed 
     PUSH EAX
     RETN
 
+The above code will change arguments provided to function “**NtDeviceIoControlFile**” when a socket connection bein performed, the arguments changed are output buffer and its length as given below :
+
+        Outbuffer = 8053513c
+        Length = 0;
+
+The routine at adddress **0x0040fa78** is executed , “**NtDeviceIoControlFile**” .
+
+     MOV EAX 42, 
+     MOV EDX,7FF30300
+     CALL EDX
+     RETN 28
+
+The modified code is it will hook without any error to connect with 127.0.0.1 at 135 port using connect() “**NtDeviceControl**”.
+The driver writes location to (0x8053513c) -> HalfDispatchTable + $4) with the value 0.  
+
+Once is hook successfully overwrites the memory to 0, NtDeviceIoControlFile is removed.
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/afd/6.png)
+
+Final Step of Exploitation To call the API “**ntdll.ZwQueryIntervalProfile**".
+
+     CALL DWORD PTR [HalfDispatchTable+$4]
+
+As mentioned earlier the value of HalfDispatchTable+$4 is now 0 stored after call to connect().
+
+        New Pointer PTR:
+        CALL 0x0000000
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/afd/7.png)
+
+The shellcode is copied to the location of 0x00000000 gets executed.
+
+API CALL “**NtDeviceIoControlFile**” will lead to arbitrary memory overwrite which will lead to Privilege Escalation.
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/afd/8.png)
+
+
+----
+ [](#header-5)**Proof Of Concept**
+---
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/afd/9.png)
+
+
+
 
 
 
