@@ -57,7 +57,7 @@ After command execution , it will list the loaded drivers with there memory addr
 
 >> Code is used to Perform the Hook:
 
-\\
+/*
     	MOV BYTE PTR DS:[ESI],68
 
     /*ESI points to start of the address of NtDeviceIoControlFile*/
@@ -66,7 +66,7 @@ After command execution , it will list the loaded drivers with there memory addr
         MOV BYTE PTR DR:[ESI+5]
 
     /* above instructions used to inject instructions in to the address space of NtDeviceIoControlFile */ 
-\\
+*/
 
 
 
