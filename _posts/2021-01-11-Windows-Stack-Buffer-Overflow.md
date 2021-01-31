@@ -6,14 +6,10 @@ categories: C C++ Asssembly
 title: Windows Stack Buffer Overflow
 ---
 
----
- [](#header-1)**Definition**
----
-
 Buffers are basically the memory area which holds data that is being transferred from one memory area to other. Buffer overflow occurs when a process to write a data in a memory which is not available or the memory is exceeded.
 
 ---
-[](#header-2)**Pre-Requisite**
+[](#header-1)**Pre-Requisite**
 ---
 
 For this Exploit I have used Windows Server 2008 r2 SP1 - 32 Bit with  VulnServer Application alongside Immunity Debugger and Ollydbg.
@@ -25,7 +21,7 @@ Windows Firewall : Disabled.
 Data Execution Prevention (DEP): Essential Services.
 
 ---
-[](#header-3)**Attack**
+[](#header-2)**Attack**
 ---
 
 I have tried to trigger an Exception in Application by sending Large Chunk of strings with TRUN command. For the demo i will be using Perl Script for this attack which runs on Local Host
@@ -172,7 +168,7 @@ We were able to successfully exploit SEH base Code Execution .
 ![](https://yashomer1994.github.io/yash007.github.io/assets/Picture 17.png)
 
 
-[](#header-4)**References**
+[](#header-3)**References**
 
 [https://www.redscan.com/news/windows-buffer-overflow-attacks-pt-1/](https://www.redscan.com/news/windows-buffer-overflow-attacks-pt-1/)
 [https://resources.infosecinstitute.com/topic/stack-based-buffer-overflow-tutorial-part-1-introduction/](https://resources.infosecinstitute.com/topic/stack-based-buffer-overflow-tutorial-part-1-introduction/)
