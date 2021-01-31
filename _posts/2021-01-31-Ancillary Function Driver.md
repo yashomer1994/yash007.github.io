@@ -75,6 +75,19 @@ Code is used to Perform the Hook:
     RETN 
 
 
+The address <zero.loc_401640> points to the hook routine which will be executed before NtDeviceIoControlFiles code as shown below :
+
+     CMP DWORD PTR SS:[ESP+18],12007
+
+    /* 12007 indicates the Iocontrolcode for socket connect */
+
+        JNZ SHORT <zero.loc_40165B>
+        MOV EAX,DWORD PTR DS:[40FA70]
+
+    /* contains values 8053513c (address of HalDispatchTable + $4) */
+
+
+
 
 
 
