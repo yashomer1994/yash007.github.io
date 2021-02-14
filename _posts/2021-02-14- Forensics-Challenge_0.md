@@ -55,6 +55,13 @@ In the output , there are process which needs to analysed.
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/process1.png)
 
+As we can **CMD.exe** process was running, lets analyse what commands have been executed.
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/cmd.png)
+
+
+
+
 
 
 
