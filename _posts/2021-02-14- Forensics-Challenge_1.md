@@ -38,6 +38,8 @@ We can see some interesting proccesses running such as :
 3. WinRar.exe :- It can create and view archives in RAR or ZIP file formats, and unpack numerous archive file formats.
 
 ---
+
+---
 [](#header-1)**Analysis_Stage 1**
 ---
 
@@ -70,7 +72,7 @@ Flag : **flag{Good_Boy_good_girl}**
 
 ---
 ---
-[](#header-1)**Analysis_Stage 3**
+[](#header-1)**Analysis_Stage3**
 ---
 
 Our Third Process is **WinRar.exe** which we are going to analyse in this section,  we will scan memory dump for archive files 
