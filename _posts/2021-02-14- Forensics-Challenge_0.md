@@ -73,6 +73,21 @@ Now, we will try to analyse the system environment variable path set.
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/xor.png)
 
+Till now we have found some interesting stuff related to the Flag.
+
+1. String with Hex-Encoded.
+2. XOR.
+3. Password.
+
+Now we will try to extract the NTLM Hash of the system as shown
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/ntlm.png)
+
+
+
+
+
+
 
 
 
