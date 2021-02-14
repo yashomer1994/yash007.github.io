@@ -59,6 +59,11 @@ As we can **CMD.exe** process was running, lets analyse what commands have been 
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/cmd.png)
 
+As we can see the executed command : **C:\Python27\python.exe C:\Users\hello\Desktop\demon.py.txt**
+
+Let's see what out we got from **stdout** 
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/hello.png)
 
 
 
