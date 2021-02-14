@@ -12,8 +12,7 @@ This is Second Blog of Series of Memory Forensics.
 My sister's computer crashed. We were very fortunate to recover this memory dump. Your job is get all her important files from the system. From what we remember, we suddenly saw a black window pop up with some thing being executed. When the crash happened, she was trying to draw something. Thats all we remember from the time of crash.
 
 ---
-[](#header-1)**Analysis_Stage-0**
-
+[](#header-1)**Analysis_Stage 0**
 ---
 
 We will first analyse the sample snapshot using the tool.
@@ -41,7 +40,7 @@ We can see some interesting proccesses running such as :
 ---
 
 ---
-[](#header-1)**Analysis_Stage-1**
+[](#header-1)**Analysis_Stage 1**
 ---
 
 We will analyse the **cmd.exe** proccesses to read the commands used and their outputs.
@@ -60,7 +59,7 @@ Flag-1 : **flag{th1s_1s_th3_1st_st4g3!!}**
 
 ---
 ---
-[](#header-1)**Analysis_Stage-2**
+[](#header-1)**Analysis_Stage 2**
 ---
 
 So this was new for me , it’s possible to reconstruct the image shown in Paint from the memory dump using a 1337 hacker tool called gimp.
@@ -73,7 +72,7 @@ Flag : **flag{Good_Boy_good_girl}**
 
 ---
 ---
-[](#header-1)**Analysis_Stage-3**
+[](#header-1)**Analysis_Stage 3**
 ---
 
 Our Third Process is **WinRar.exe** which we are going to analyse in this section,  we will scan memory dump for archive files 
