@@ -65,6 +65,16 @@ Let's see what output we recieved from **stdout**
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/hello.png)
 
+As highlighted above, stdout throws some string "**335d366f5d6031767631707f**" which is in hex encoded format , on decoding the string we found something as shown .
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/hex.png)
+
+Now, we will try to analyse the system environment variable path set.
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/xor.png)
+
+
+
 
 
 
