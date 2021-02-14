@@ -58,7 +58,6 @@ We have retreived Our **First Flag**.
 Flag-1 : **flag{th1s_1s_th3_1st_st4g3!!}**
 
 ---
-
 ---
 [](#header-1)**Analysis_Stage-2**
 ---
@@ -71,6 +70,7 @@ Just Flip and mirror the image get second flag.
 
 Flag : **flag{Good_Boy_good_girl}**
 
+---
 ---
 [](#header-1)**Analysis_Stage-3**
 ---
