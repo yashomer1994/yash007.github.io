@@ -49,10 +49,12 @@ We can see the list of processes which were running when the memory dump was car
 
 In the output , there are process which needs to analysed.
 
-1. cmd.exe
-2. DumpIt.exe
-3. explorer.exe
+1. cmd.exe :- This process executes Command Prompt.We can analyse this process to which commands have been executed.
+2. DumpIt.exe :- This is tool which was used to dump the memory.
+3. explorer.exe :- This process handles File Explorer.
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/process1.png)
+
+
 
 
