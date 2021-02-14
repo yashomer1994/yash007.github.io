@@ -3,7 +3,7 @@ layout: post
 title:  "Forensic Basics Challenge_0"
 date:   2021-02-14
 categories: C C++ Asssembly Python 
-title: Forensic Bacis Challenge_0
+title: Forensic Basics Challenge_0
 ---
 
 I am very curious about memory forensics, so i decided to start with Introdution of Memory Forensics using CTF Challenge Samples.
