@@ -83,16 +83,9 @@ Now we will try to extract the NTLM Hash of the system as shown
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/ntlm.png)
 
-/* 
-    
-    a = "335d366f5d6031767631707f".decode("hex")
-     for i in range(0, 255):
-        b = ""
-        for j in a:
-            b = b + chr(ord(j) ^ i)
-            print b
+Using the online NTLM hash crash tool we can retrive the Flag.
 
-*/
+ // Flag : flag{you_are_good_but1_4m_b3tt3r}
 
 
 
