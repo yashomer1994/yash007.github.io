@@ -85,7 +85,6 @@ Now we will try to extract the NTLM Hash of the system as shown
 
 /* 
     a = "335d366f5d6031767631707f".decode("hex")
-
      for i in range(0, 255):
         b = ""
         for j in a:
