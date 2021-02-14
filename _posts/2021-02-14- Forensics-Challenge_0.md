@@ -32,4 +32,19 @@ The **Profile** Tells about the OS of the image from which machine the dump data
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/imageinfo.png)
 
+Volatility framework provides the details about of image, which profile to be used.
+
+As a Security Researcher, Following specifications are analysed before going any further :
+
+1. Currently Running Processes.
+2. Commands executed.
+3. Processes which have been terminated.
+4. Browser History.
+
+So , to list the current running processes, we will use the following command as shown in image below.
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/process.png)
+
+
+
 
