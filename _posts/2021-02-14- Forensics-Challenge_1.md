@@ -47,7 +47,7 @@ We will analyse the **cmd.exe** proccesses to read the commands used and their o
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge1/cmd.png)
 
-As shown the stdout throws some string **ZmxhZ3t0aDFzXzFzX3RoM18xc3Rfc3Q0ZzMhIX0=** encoded.
+As shown the stdout throws some string "**ZmxhZ3t0aDFzXzFzX3RoM18xc3Rfc3Q0ZzMhIX0=**" encoded.
 
 We tried to decode the following string.
 
@@ -91,7 +91,7 @@ We will try to Dump the **NTLM hashes**
 
 We will use **NTLM hashes**  as password to extract the **IMPORTANT.rar**.
 
-NTLM Hash : F4FF64C8BAAC57D22F22EDC681055BA6
+**NTLM Hash : F4FF64C8BAAC57D22F22EDC681055BA6**
 
 The flag can be found after decrypting file.
 
