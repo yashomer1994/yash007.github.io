@@ -3,7 +3,7 @@ layout: post
 title:  "Forensic Basics Challenge_1"
 date:   2021-02-14
 categories: C C++ Asssembly Python 
-title: Beginner's Luck
+title: Forensic-Challenge-1_Beginner's Luck
 ---
 This is Second Blog of Series of Memory Forensics.
 
