@@ -83,6 +83,18 @@ Now we will try to extract the NTLM Hash of the system as shown
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/ntlm.png)
 
+/* 
+    a = "335d366f5d6031767631707f".decode("hex")
+
+     for i in range(0, 255):
+        b = ""
+        for j in a:
+            b = b + chr(ord(j) ^ i)
+            print b
+*/
+
+
+
 
 
 
