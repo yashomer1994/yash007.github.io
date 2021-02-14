@@ -90,8 +90,8 @@ Using the online NTLM hash crash tool we can retrive the Flag.
 ---
 [](#header-1)**References**
 --- 
-1. (https://darkdefender.medium.com/write-up-memory-forensics-in-the-def-con-dfir-ctf-c2b50ed62c6b)
-2. (https://github.com/volatilityfoundation/volatility)
+1. https://darkdefender.medium.com/write-up-memory-forensics-in-the-def-con-dfir-ctf-c2b50ed62c6b
+2. https://github.com/volatilityfoundation/volatility
 
 
 
