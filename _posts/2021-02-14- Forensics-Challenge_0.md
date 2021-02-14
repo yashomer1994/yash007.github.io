@@ -83,7 +83,7 @@ Now we will try to extract the NTLM Hash of the system as shown
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/ntlm.png)
 
-Using the online NTLM hash crash tool we can retrive the Flag.
+Using the online NTLM hash crack tool we can retrive the Flag.
 
  // Flag : **flag{you_are_good_but1_4m_b3tt3r}**
 
