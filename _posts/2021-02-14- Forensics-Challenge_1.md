@@ -93,7 +93,7 @@ NTLM Hash : F4FF64C8BAAC57D22F22EDC681055BA6
 
 The flag can be found after decrypting file.
 
-![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge1/flag1.png)
+![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge1/flag3.png)
 
 So we have found our third Flag as shown.
 
