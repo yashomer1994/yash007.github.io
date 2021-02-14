@@ -14,7 +14,7 @@ My sister's computer crashed. We were very fortunate to recover this memory dump
 ---
 [](#header-1)**Analysis_Stage-1**
 ---
-
+---
 We will first analyse the sample snapshot using the tool.
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge1/info.png)
