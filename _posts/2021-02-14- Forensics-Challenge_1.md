@@ -14,7 +14,7 @@ My sister's computer crashed. We were very fortunate to recover this memory dump
 ---
 [](#header-1)**Analysis_Stage 0**
 ---
----
+
 We will first analyse the sample snapshot using the tool.
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge1/info.png)
@@ -36,8 +36,6 @@ We can see some interesting proccesses running such as :
 1. cmd.exe :- This process executes Command Prompt.We can analyse this process to which commands have been executed.
 2. mspaint.exe :- This process executes mspaint. We can analyse this process sensitive blue print.
 3. WinRar.exe :- It can create and view archives in RAR or ZIP file formats, and unpack numerous archive file formats.
-
----
 
 ---
 [](#header-1)**Analysis_Stage 1**
