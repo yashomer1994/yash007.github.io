@@ -45,6 +45,7 @@ So , to list the current running processes, we will use the following command as
 
 ![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge0/process.png)
 
+We can see the list of processes which were running when the memory dump was carried out. 
 
 
 
