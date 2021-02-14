@@ -21,7 +21,7 @@ Memory forensic refers to the analysis of the volatile memory dump of Virtual Im
 A Snapshot of A Virtual Machine image or a physical memory dump which may contain about the valuable forensics data about the system behaviour and root cause of a crash.
 
 ---
-[](#header-1)**Analysis-Stage_1**
+[](#header-1)**Analysis**
 ---
 
 Our first stage will be to analyse the Memory dump file using tool Volatility Framework.
@@ -85,7 +85,15 @@ Now we will try to extract the NTLM Hash of the system as shown
 
 Using the online NTLM hash crash tool we can retrive the Flag.
 
- // Flag : flag{you_are_good_but1_4m_b3tt3r}
+ // Flag : **flag{you_are_good_but1_4m_b3tt3r}**
+
+---
+[](#header-1)**References**
+--- 
+1. https://darkdefender.medium.com/write-up-memory-forensics-in-the-def-con-dfir-ctf-c2b50ed62c6b
+2. https://github.com/volatilityfoundation/volatility
+
+
 
 
 
