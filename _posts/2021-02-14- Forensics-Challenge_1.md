@@ -5,7 +5,7 @@ date:   2021-02-14
 categories: C C++ Asssembly Python 
 title: Forensic-Challenge-1_Beginner's Luck
 ---
-This is Second Blog of Series of Memory Forensics.
+This is Second Blog of  Memory Forensic series.
 
 [](#header-1)**Challenge Description**
 ---
