@@ -2,7 +2,7 @@
 layout: post
 title:  "Forensic Basics Challenge-03"
 date:   2021-03-03
-categories: C C++ Asssembly Python 
+categories: Asssembly Python JPEG
 title: Forensic-Challenge-03 Evil's den
 ---
 
