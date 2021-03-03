@@ -67,6 +67,38 @@ Using online tool we will try to decrypt the **Base64** Encoded **XOR** to rever
 
 ---
 **FLAG - 01 : inctf{0n3_h4lf**
+---
+
+Filescan Output , gives some common file format but we can see something **suspicious**.
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge3/suspicious.png)
+
+Using the offset we tried to dump the following file for better analysis.
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge3/secret.png)
+
+**Extracted Output:**
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge3/1.png)
+
+We try to find the hidden information from the extracted image.
+
+![](https://yashomer1994.github.io/yash007.github.io/assets/forensics/challenge3/steg.png)
+
+So we found our second flag.
+
+---
+**FLAG - 02 : _1s_n0t_3n0ugh}**
+---
+
+Appending the two Flags together we will get our Final Flag.
+
+**FINAL-FLAG: inctf{0n3_h4lf_1s_n0t_3n0ugh}**
+
+
+
+
+
 
 
 
