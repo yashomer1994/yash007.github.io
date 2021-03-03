@@ -67,7 +67,7 @@ Using online tool we will try to decrypt the **Base64** Encoded **XOR** to rever
 
 ---
 **FLAG - 01 : inctf{0n3_h4lf**
----
+
 
 
 
