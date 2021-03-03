@@ -14,3 +14,8 @@ In this blog , I have tried to Build and Run Google developed Fuchsia Operating 
 ---
 
 Fuchsia is an Open source operating system developed by Google under active development. This is Operating System is based on Zircon kernel (microkernel).
+
+[](#header-1)**Secure**
+---
+
+Softwares will have least privileges to run over the **USERLAND**.
