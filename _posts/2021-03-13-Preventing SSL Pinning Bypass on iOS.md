@@ -85,7 +85,7 @@ The code Shown below is not written by me, i will link it below Github Repositor
 
 We will implement the Key and Hash in the following code , the following code will try to check the connection working successfully.
 
-    -   
+    
             import Foundation
             import Security
 
