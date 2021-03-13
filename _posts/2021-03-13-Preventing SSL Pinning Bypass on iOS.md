@@ -23,6 +23,7 @@ When the application tries to communicate with the server or other applications 
 ---
 **Scenario**
 ---
+---
 
 Attacker is able to generate a Self-Signed Certificates and install it to the Operating system trust's store to setup MITM attack to bypass SSL.
 
@@ -38,7 +39,7 @@ Impact :
 [](#header-3)**Methods to Prevent SSL Pinning Bypass**
 ---
 
-There several Mechanism to prevent the SSL Pinning Bypass by means of **Chain Of Trust** 
+There several Mechanism to prevent the SSL Pinning Bypass by means of **Chain Of Trust** : 
 
 Certificate Pinning Knowing in advance the certificate of the server our application is communication with, we can hard-code  into the application itself and refuse communicating unless it is a perfect match.
 
