@@ -20,6 +20,8 @@ SSL Pinning is a Mechanism used in Mobile Applications to Secure the Transmissio
 
 When the application tries to communicate with the server or other applications , it doesen't validate which certificate is secured and trusted and which isn't. Let's take a Scenario to better understand the use of SSL Pinning.
 
+![](https://yashomer1994.github.io/yash007.github.io/assets/iOS/server.png)
+
 ---
 **Scenario**
 ---
