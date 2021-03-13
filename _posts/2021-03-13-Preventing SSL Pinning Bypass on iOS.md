@@ -15,7 +15,7 @@ In this recent years, Attacker first step to reverse engineer the Mobile applica
 
 SSL Pinning is a Mechanism used in Mobile Applications to Secure the Transmission between the Client and Server from **MITM** Attacks. SSL technique  is used by Applications to accept the  default to trusted certificates by Operating System which is stored in certificate store.
 
-[](#header-1)**Why SSL Pinning ?**
+[](#header-2)**Why SSL Pinning ?**
 ---
 
 When the application tries to communicate with the server or other applications , it doesen't validate which certificate is secured and trusted and which isn't. Let's take a Scenario to better understand the use of SSL Pinning.
@@ -33,6 +33,19 @@ Impact :
     - The root CAs which are trusted by the devices can also get compromised and can be used for generating certificates.
 
 --- 
+
+--- 
+[](#header-3)**Methods to Prevent SSL Pinning Bypass**
+---
+
+There several Mechanism to prevent the SSL Pinning Bypass by means of **Chain Of Trust** 
+
+    - Certificate Pinning Knowing in advance the certificate of the server our application is communication with, we can hard-code  into the application itself and refuse communicating unless it is a perfect match.
+
+---
+
+
+
 
 
 
