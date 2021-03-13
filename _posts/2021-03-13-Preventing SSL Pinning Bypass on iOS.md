@@ -66,10 +66,9 @@ Methods :
 [](#header-5)**Certificate and Key Generation**
 ---
 
-For scenario i have taken **google.com** as an example and use in application.
-The code Shown below is not written by me, i will link it below Github Repository.
+For explaination I  have used  **google.com** as an example and use in application. I found this very code very usefull on the internet, will link Github Repository for your reference.
 
-- Create CCertificate and sha256 Hash using the following command 
+- Create Certificate and sha256 Hash using the following command 
         
         - openssl s_client -connect www.google.com:443 -showcerts < /dev/null | openssl x509  -outform DER > google.der python -sBc "from __future__ import print_function;import hashlib;print(hashlib.sha256(open('google.der','rb').read()).digest(), end='')" | base64  KjLxfxajzmBH0fTH1/oujb6R5fqBiLxl0zrl2xyFT2E=
 
@@ -152,6 +151,40 @@ We will implement the Key and Hash in the following code , the following code wi
         completionHandler(.cancelAuthenticationChallenge, nil)
     }
 }
+
+---
+- Create **URLSession** to validate the connection verified.
+---
+
+                if let url = NSURL(string: "https://www.google.com/") {
+
+            let session = URLSession(
+                configuration: URLSessionConfiguration.ephemeral,
+                delegate: URLSessionPinningDelegate(),
+                delegateQueue: nil)
+
+            let task = session.dataTask(with: url as URL, completionHandler: { (data, response, error) -> Void in
+                if error != nil {
+                    print("error: \(error!.localizedDescription))")
+                } else if data != nil {
+                    if let str = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
+                        print("Received data:\n\(str)")
+                    }
+                    else {
+                        print("Unable to convert data to text")
+                    }
+                }
+            })
+            
+            task.resume()
+        }
+        else {
+            print("Unable to create NSURL")
+        }
+
+
+        
+
 
 
 
