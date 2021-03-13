@@ -40,7 +40,7 @@ Impact :
 
 There several Mechanism to prevent the SSL Pinning Bypass by means of **Chain Of Trust** 
 
-    - Certificate Pinning Knowing in advance the certificate of the server our application is communication with, we can hard-code  into the application itself and refuse communicating unless it is a perfect match.
+Certificate Pinning Knowing in advance the certificate of the server our application is communication with, we can hard-code  into the application itself and refuse communicating unless it is a perfect match.
 
 ---
 
