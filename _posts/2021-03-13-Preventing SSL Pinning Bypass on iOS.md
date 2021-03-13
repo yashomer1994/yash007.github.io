@@ -125,15 +125,15 @@ We will implement the Key and Hash in the following code , the following code wi
 
                         // Certificate pinning, uncomment to use this instead of public key pinning
 
-//                        let serverCertificateData:NSData = SecCertificateCopyData(serverCertificate)
-//                        let certHash = sha256(data: serverCertificateData as Data)
-//                        if (certHash == pinnedCertificateHash) {
-//                            // Success! This is our server
-//                            completionHandler(.useCredential, URLCredential(trust:serverTrust))
-//                            return
-//                        }
+                //let serverCertificateData:NSData = SecCertificateCopyData(serverCertificate)
+                    let certHash = sha256(data: serverCertificateData as Data)
+                        if (certHash == pinnedCertificateHash) {
+                            // Success! This is our server
+                            completionHandler(.useCredential, URLCredential(trust:serverTrust))
+                            return
+                        }
 
-                        // Public key pinning
+                        / Public key pinning
                         let serverPublicKey = SecCertificateCopyPublicKey(serverCertificate)
                         let serverPublicKeyData:NSData = SecKeyCopyExternalRepresentation(serverPublicKey!, nil )!
                         let keyHash = sha256(data: serverPublicKeyData as Data)
