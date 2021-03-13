@@ -27,7 +27,6 @@ When the application tries to communicate with the server or other applications 
 ---
 **Scenario**
 ---
----
 
 Attacker is able to generate a Self-Signed Certificates and install it to the Operating system trust's store to setup MITM attack to bypass SSL.
 
