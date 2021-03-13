@@ -27,7 +27,9 @@ When the application tries to communicate with the server or other applications 
 Attacker is able to generate a Self-Signed Certificates and install it to the Operating system trust's store to setup MITM attack to bypass SSL.
 
 Impact :
+
     - Tamper the SSL Sessions and reverse engineer the app protocol or extracting the API Requests Acceess.
+
     - The root CAs which are trusted by the devices can also get compromised and can be used for generating certificates.
 
 --- 
