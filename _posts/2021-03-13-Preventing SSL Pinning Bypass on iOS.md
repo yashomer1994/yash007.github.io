@@ -36,7 +36,7 @@ Impact :
 --- 
 
 --- 
-[](#header-3)**Methods to Prevent SSL Pinning Bypass**
+[](#header-3)**Prevent SSL Pinning Bypass**
 ---
 
 There several Mechanism to prevent the SSL Pinning Bypass by means of **Chain Of Trust** : 
@@ -49,13 +49,15 @@ Certificate Pinning Knowing in advance the certificate of the server our applica
 [](#header-4)**How To Pin?**
 ---
 
-This technqiue is to harden the seurity of Applications by adding extra layer of identity check performed by Application Itself.
+This technqiue is to harden the security of Applications by adding extra layer of identity check performed by Application Itself.
 
 Methods : 
      
 - **Certificate**: There's drawback of using feature is Certificate have expire after certain period of time. When Implmenting Certificate Pinning in application , need to take care of Certificate while updating the Application.
 
-- **Public Key**: Certificates Updated Regularly but the public key remains the same or you have the ability to keep it same. Therefore pinning the key makes the design more flexible, but a bit trickier to implement, as now we have to extract the key from the certificate, both at pinning time and at every connection
+- **Public Key**: Certificates Updated Regularly but the public key remains the same or you have the ability to keep it same. Therefore pinning the key makes the design more flexible, but a bit trickier to implement, as now we have to extract the key from the certificate, both at pinning time and at every connection.
+
+        - Create a sha256 hashes and store them. It makes it easier to manage due to size and it allows shipping an application with a hash of a future certificate or key without exposing them ahead of time.
 
 
 
