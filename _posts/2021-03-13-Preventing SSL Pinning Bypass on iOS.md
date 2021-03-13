@@ -152,9 +152,9 @@ We will implement the Key and Hash in the following code , the following code wi
     }
 }
 
----
+
 - Create **URLSession** to validate the connection verified.
----
+
 
                 if let url = NSURL(string: "https://www.google.com/") {
 
