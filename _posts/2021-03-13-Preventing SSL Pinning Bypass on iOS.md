@@ -63,6 +63,8 @@ Methods :
         - Create a sha256 hashes and store them. It makes it easier to manage due to size and it allows shipping an application with a hash of a future certificate or key without exposing them ahead of time.
 
 --- 
+
+---
 [](#header-5)**Certificate and Key Generation**
 ---
 
@@ -79,6 +81,8 @@ For explaination I  have used  **google.com** as an example and use in applicati
 
 
 --- 
+
+---
 [](#header-6)**Implementing in iOS**
 ---
 
@@ -183,13 +187,16 @@ We will implement the Key and Hash in the following code , the following code wi
         }
 
 --- 
+
+---
 [](#header-7)**Conclusion**
 
 ---
 
  It is much safer to rely on additional layer of protection since we have the luxury to pin the exact certificate or the public key we are expecting on the other side. We’ve learned how to extract a server key as well as how to implement the pinning on iOS. Stay tuned, in our next tutorial we will cover the methods to implement certificate pinning on Android.
 
---- 
+---
+---
 [](#header-7)**References**
 
 ---
