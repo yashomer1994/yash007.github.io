@@ -9,13 +9,14 @@ title: Preventing SSL Pinning Bypass on iOS
 In this recent years, Attacker first step to reverse engineer the Mobile application is to bypass SSL/TLS Pinning, so to get start to prevent the app from bypassed i will start explaining from basics to advanced in several series of blogs.
 
 --- 
+---
 
 [](#header-1)**Introduction to SSL Pinning**
 ---
 
----
-
 SSL Pinning is a Mechanism used in Mobile Applications to Secure the Transmission between the Client and Server from **MITM** Attacks. SSL technique  is used by Applications to accept the  default to trusted certificates by Operating System which is stored in certificate store.
+
+---
 
 [](#header-2)**Why SSL Pinning ?**
 ---
