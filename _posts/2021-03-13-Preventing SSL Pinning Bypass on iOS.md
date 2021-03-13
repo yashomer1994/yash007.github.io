@@ -124,6 +124,7 @@ We will implement the Key and Hash in the following code , the following code wi
                     if let serverCertificate = SecTrustGetCertificateAtIndex(serverTrust, 0) {
 
                         // Certificate pinning, uncomment to use this instead of public key pinning
+
 //                        let serverCertificateData:NSData = SecCertificateCopyData(serverCertificate)
 //                        let certHash = sha256(data: serverCertificateData as Data)
 //                        if (certHash == pinnedCertificateHash) {
