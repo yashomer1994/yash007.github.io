@@ -184,12 +184,14 @@ We will implement the Key and Hash in the following code , the following code wi
 
 --- 
 [](#header-7)**Conclusion**
+
 ---
 
  It is much safer to rely on additional layer of protection since we have the luxury to pin the exact certificate or the public key we are expecting on the other side. We’ve learned how to extract a server key as well as how to implement the pinning on iOS. Stay tuned, in our next tutorial we will cover the methods to implement certificate pinning on Android.
 
 --- 
 [](#header-7)**References**
+
 ---
  
  1. [https://github.com/bugsee/examples-ios-certificate-pinning](https://github.com/bugsee/examples-ios-certificate-pinning).
