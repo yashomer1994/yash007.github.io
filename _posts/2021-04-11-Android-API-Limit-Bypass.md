@@ -93,7 +93,12 @@ Here i will try to explain and analyse the above code step by step.
 
     3. If conditions doesn't met as above,  The domain used in the code is **kApplications**, which will be looked first.
 
-**GetCaller** ::
+---
+---
+**GetCaller** :
+
+---
+---
 
      bool VisitFrame() override REQUIRES_SHARED(Locks::mutator_lock_) {
        ArtMethod *m = GetMethod();
@@ -295,14 +300,14 @@ Application core accessing system **API**.
 
 
 ---
-[](#header-6)**Summary**
+[](#header-7)**Summary**
 
 ---
 
   This blog is to explain the Restrictions imposed on API , in the next blog i will explain the bypass Technique.
 
 ---
-[](#header-7)**References**
+[](#header-8)**References**
 
 ---
  
