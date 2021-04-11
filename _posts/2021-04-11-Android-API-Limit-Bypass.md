@@ -14,7 +14,7 @@ In 2018 Android release new version Android Pie / 9 introducing some **Hidden AP
 
 To breakin the restrictions we have to understammd the system restrictions imposed, here i have tried to explain the method through reflection in Java Layer. 
 
-Example : Method through reflection is Java Layer "**Class.getMethod/getDeclaredMethod**.
+Example : Method through reflection is Java Layer "**Class.getMethod/getDeclaredMethod**".
 
 Method Implementation : 
 
