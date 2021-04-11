@@ -84,3 +84,6 @@ To call **ShouldDenyAccessToMember** we use **hiddenapi::ShouldDenyAccessToMembe
  ---
  **Analysis**
  ---
+Here i will try to explain and analyse the above code step by step.
+
+    1. Validate the target memeber is a Public API, if check got passed it  will acquired by "**GetRunTimeFlags**" , this flag is stored in  the member **access_flags**.
