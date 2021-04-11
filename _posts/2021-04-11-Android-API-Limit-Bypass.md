@@ -16,20 +16,20 @@ To breakin the restrictions we have to understammd the system restrictions impos
 
 Example :
 
-       case Domain::kPlatform: {
-    DCHECK(callee_context.GetDomain() == Domain::kCorePlatform);
+     static jobject Class_getDeclaredMethodInternal(JNIEnv* env, jobject javaThis, jstring name, jobjectA rray args) {
+  // Omit irrelevant code...
+    handle<mirror::Method> result = hs.NewHandle(
+    mirror::Class::GetDeclaredMethodInternal<kRuntimePointerSize>(
+    soa.Self(),
+    Klass,
+    soa.Decode<mirror::String> (name),
+    soa.Decode<mirror::ObjectArray<mirror::Class>>(args),
+    GetHiddenapiAccessContextFunction(soa.Self()));
+     if (result == nullptr || ShouldDenyAccessToMember(result->GetArtMethod(), soa.Self())) {
+     Return nullptr;
+    }
+      return soa.AddLocalReference<jobject>(result.Get());
+    }
 
-     // If it is the Core Platform API that needs to be exposed, through
-    if ((runtime_flags & kAccCorePlatformApi) ! = 0) {
-    Return false;
-        }
+---
 
-    // Close the access restriction completely, through
-    // The default in Android Q is off, and it is unknown in R.
-    EnforcementPolicy policy = Runtime::Current()->GetCorePlatformApiEnforcementPolicy();
-    if (policy == EnforcementPolicy::kDisabled) {
-    Return false;
-         }
-
-      return details::HandleCorePlatformApiViolation(member, caller_context, access_method, policy);
-        }
