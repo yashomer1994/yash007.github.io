@@ -239,7 +239,7 @@ As per Android Devloper Blogs, this feature disabled in Android Q, and not known
 [](#header-6)**Focus**
 
 ---
-
+---
 Application core accessing system **API**.
 
             template<typename T>
@@ -300,3 +300,12 @@ Application core accessing system **API**.
 ---
 
   This blog is to explain the Restrictions imposed on API , in the next blog i will explain the bypass Technique.
+
+---
+[](#header-7)**References**
+
+---
+ 
+ 1. [https://github.com/LSPosed/AndroidHiddenApiBypass](https://github.com/LSPosed/AndroidHiddenApiBypass).
+
+ 2. [https://github.com/anggrayudi/android-hidden-api](https://github.com/anggrayudi/android-hidden-api)
