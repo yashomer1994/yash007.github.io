@@ -10,9 +10,10 @@ In 2018 Android release new version Android Pie / 9 introducing some **Hidden AP
 
 ---
 [](#header-1)**Policies**
+
 ---
 
-To breakin the restrictions we have to understammd the system restrictions imposed, here i have tried to explain the method through reflection in Java Layer. 
+Android has imposed system API Restriction which restricts application from accessing the system API, and try to abuse as per requirement. 
 
 Example : Method through reflection is Java Layer "**Class.getMethod/getDeclaredMethod**".
 
