@@ -161,7 +161,7 @@ Here i will try to explain and analyse the above code step by step.
 
 ---
 ---
-When the class is loaded first time, it call initalise dex_files :
+When the class is loaded first time, it initalises **dex_files** :
 
     static Domain DetermineDomainFromLocation(const std::string& dex_location,
     ObjPtr<mirror::ClassLoader> class_loader) {
