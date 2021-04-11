@@ -87,3 +87,50 @@ To call **ShouldDenyAccessToMember** we use **hiddenapi::ShouldDenyAccessToMembe
 Here i will try to explain and analyse the above code step by step.
 
     1. Validate the target memeber is a Public API, if check got passed it  will acquired by "**GetRunTimeFlags**" , this flag is stored in  the member **access_flags**.
+    
+    2. Store caller domain, validate it and pass it .
+
+    3. If conditions doesn't met as above,  The domain used in the code is **kApplications**, which will be looked first.
+
+**GetCaller** 
+
+     bool VisitFrame() override REQUIRES_SHARED(Locks::mutator_lock_) {
+       ArtMethod *m = GetMethod();
+        if (m == nullptr) {
+        // Attached native thread. Assume this is *not* boot class path.
+    caller = nullptr;
+        Return false;
+    } else if (m->IsRuntimeMethod()) {
+        // Skip the internal method of ART Runtime
+        Return true;
+    }
+
+    ObjPtr<mirror::Class> declaring_class = m->GetDeclaringClass();
+    if (declaring_class->IsBootStrapClassLoaded()) {
+        // Skip the internal method in java.lang.Class
+        if (declaring_class->IsClassClass()) {
+            Return true;
+    }
+
+        // Skip java.lang.invoke. *
+    ObjPtr<mirror::Class> lookup_class = GetClassRoot<mirror::MethodHandlesLookup>();
+        if ((declaring_class == lookup_class || declaring_class->IsInSamePackage(lookup_class))
+    &&! m->IsClassInitializer()) {
+            Return true;
+    }
+
+        // Skip from java.lang.reflect if PREVENT_META_REFLECTION_BLACKLIST_ACCESS is Enabled. * Visit
+        // The key to the system's restriction on "set baby reflection" is here.
+    ObjPtr<mirror::Class> proxy_class = GetClassRoot<mirror::Proxy>();
+        if (declaring_class->IsInSamePackage(proxy_class) && declaring_class ! = proxy_class) {
+            if (Runtime::Current()->isChangeEnabled(kPreventMetaReflectionBlacklistAccess)) {
+                Return true;
+    }
+    }
+    }
+
+    Caller = m;
+    Return false;
+    }
+
+    --- 
