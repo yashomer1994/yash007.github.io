@@ -92,7 +92,7 @@ Here i will try to explain and analyse the above code step by step.
 
     3. If conditions doesn't met as above,  The domain used in the code is **kApplications**, which will be looked first.
 
-**GetCaller** 
+**GetCaller** ::
 
      bool VisitFrame() override REQUIRES_SHARED(Locks::mutator_lock_) {
        ArtMethod *m = GetMethod();
@@ -134,3 +134,27 @@ Here i will try to explain and analyse the above code step by step.
     }
 
     --- 
+
+**Domain According to Caller** 
+
+    static Domain ComputeDomain(ObjPtr<mirror::ClassLoader> class_loader, const DexFile* dex_file) {
+    if (dex_file == nullptr) {
+        // dex_file == nullptr && class_loader == nullptr (i.e., the class loaded by BootClassLoader), then trusted
+        return ComputeDomain(/* is_trusted= */ class_loader.IsNull());
+    }
+       // Get the Domain of dex_file
+    return dex_file->GetHiddenapiDomain();
+    }
+
+    static Domain ComputeDomain(ObjPtr<mirror::Class> klass, const DexFile* dex_file)
+    REQUIRES_SHARED(Locks::mutator_lock_) {
+
+    Domain Domain = ComputeDomain(klass->GetClassLoader(), dex_file);
+
+    if (domain == Domain::kApplication && klass->ShouldSkipHiddenApiChecks() && Runtime::Current()->IsJa vaDebuggable()) {
+        // Under debug mode, developers can actively specify certain types of trust for debugging.
+    domain = ComputeDomain(/* is_trusted= */ true);
+    }
+
+    Return domain;
+    }
