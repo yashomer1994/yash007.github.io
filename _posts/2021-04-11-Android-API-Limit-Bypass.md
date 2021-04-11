@@ -20,13 +20,13 @@ Example :
     DCHECK(callee_context.GetDomain() == Domain::kCorePlatform);
 
      // If it is the Core Platform API that needs to be exposed, through
-  if ((runtime_flags & kAccCorePlatformApi) ! = 0) {
+    if ((runtime_flags & kAccCorePlatformApi) ! = 0) {
     Return false;
         }
 
     // Close the access restriction completely, through
     // The default in Android Q is off, and it is unknown in R.
-   EnforcementPolicy policy = Runtime::Current()->GetCorePlatformApiEnforcementPolicy();
+    EnforcementPolicy policy = Runtime::Current()->GetCorePlatformApiEnforcementPolicy();
     if (policy == EnforcementPolicy::kDisabled) {
     Return false;
          }
