@@ -6,7 +6,7 @@ categories:  Android, Java
 title: Android Hidden API Restrictions
 ---
 
-In 2018 Android release new version Android Pie / 9 introducing some **Hidden APIs** in the android ecosystem , with limited access for developers are trying to bypass the restriction.
+In 2018 Android release new version Android R introducing some **Hidden APIs** in the android ecosystem , with limited access for developers are trying to bypass the restriction.
 
 ---
 [](#header-1)**Policies**
