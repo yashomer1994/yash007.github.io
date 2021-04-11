@@ -158,3 +158,43 @@ Here i will try to explain and analyse the above code step by step.
 
     Return domain;
     }
+
+---
+---
+When the class is loaded first time, it call initalise dex_files :
+
+    static Domain DetermineDomainFromLocation(const std::string& dex_location,
+    ObjPtr<mirror::ClassLoader> class_loader) {
+
+    if (ArtModuleRootDistinctFromAndroidRoot()) {
+        // Within several core apex modules
+        if (LocationIsOnArtModule(dex_location.c_str())
+    || LocationIsOnConscryptModule(dex_location.c_str())
+    || LocationIsOnI18nModule(dex_location.c_str())) {
+            return Domain::kCorePlatform;
+    }
+
+        // Under apex but not the core module
+        if (LocationIsOnApex(dex_location.c_str())) {
+            return Domain::kPlatform;
+    }
+    }
+
+    // Under /system/framework/
+    if (LocationIsOnSystemFramework(dex_location.c_str())) {
+        return Domain::kPlatform;
+    }
+
+    // Under /system/ext/framework/
+    if (LocationIsOnSystemExtFramework(dex_location.c_str())) {
+        return Domain::kPlatform;
+    }
+
+    // ClassLoader is null (i.e. BootClassLoader)
+    if (class_loader.IsNull()) {
+    LOG(WARNING) << "DexFile" << dex_location <<" is in boot class path, but not in a known Location";
+        return Domain::kPlatform;
+    }
+
+      return Domain::kApplication;
+    }
