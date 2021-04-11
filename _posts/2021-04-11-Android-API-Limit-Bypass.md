@@ -198,3 +198,28 @@ When the class is loaded first time, it initalises **dex_files** :
 
       return Domain::kApplication;
     }
+
+---
+---
+
+Three domains are subdivided in Android Q: kCorePlatform, kPlatform, and kApplication.
+
+Let's analyze some of the restrictions on kPlatform and kCorePlatform ::
+
+    case Domain::kPlatform: {
+    DCHECK(callee_context.GetDomain() == Domain::kCorePlatform);
+
+  // If it is the Core Platform API that needs to be exposed, through
+  if ((runtime_flags & kAccCorePlatformApi) ! = 0) {
+    Return false;
+    }
+
+  // Close the access restriction completely, through
+  // The default in Android Q is off, and it is unknown in R.
+    EnforcementPolicy policy = Runtime::Current()->GetCorePlatformApiEnforcementPolicy();
+  if (policy == EnforcementPolicy::kDisabled) {
+    Return false;
+    }
+
+  return details::HandleCorePlatformApiViolation(member, caller_context, access_method, policy);
+    }
