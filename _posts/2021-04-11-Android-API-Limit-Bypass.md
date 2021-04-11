@@ -230,8 +230,11 @@ Let's analyze some of the restrictions on kPlatform and kCorePlatform ::
 As per Android Devloper Blogs, this feature disabled in Android Q, and not known in R.
 
 ---
+
+---
 [](#header-6)**Focus**
 ---
+
 Application core accessing system **API**.
 
             template<typename T>
@@ -284,4 +287,4 @@ Application core accessing system **API**.
 
       return deny_access;
     }
-    
+
