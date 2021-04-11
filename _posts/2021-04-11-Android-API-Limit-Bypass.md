@@ -226,3 +226,62 @@ Let's analyze some of the restrictions on kPlatform and kCorePlatform ::
 
 ---
 ---
+
+As per Android Devloper Blogs, this feature disabled in Android Q, and not known in R.
+
+---
+[](#header-6)**Focus**
+---
+Application core accessing system **API**.
+
+            template<typename T>
+      bool ShouldDenyAccessToMemberImpl(T* member, ApiList api_list, AccessMethod access_method) {
+      Runtime* runtime = Runtime::Current();
+
+      EnforcementPolicy hiddenApiPolicy = runtime->GetHiddenApiEnforcementPolicy();
+
+     MemberSignature member_signature (member);
+
+     // There is an exemption list inside the ART, if matched, through
+    if (member_signature.DoesPrefixMatchAny(runtime->GetHiddenApiExemptions())) {
+    MaybeUpdateAccessFlags (runtime, member, kAccPublicApi);
+    Return false;
+    }
+  
+      bool deny_access = false;
+  
+    EnforcementPolicy testApiPolicy = runtime->GetTestApiEnforcementPolicy();
+      // Not handled if hiddenApiPolicy == EnforcementPolicy::kJustWarn (EnforcementPolicy has only three states)
+      if (hiddenApiPolicy == EnforcementPolicy::kEnabled) {
+        if (testApiPolicy == EnforcementPolicy::kDisabled && api_list.IsTestApi()) {
+          // Special handling of test APIs (i.e., APIs with @TestApi annotations) within ART
+    deny_access = false;
+    } else {
+          // Compare SdkVersion to decide if you need to deny access
+          // The so-called gray list/blacklist is realized here.
+          switch (api_list.GetMaxAllowedSdkVersion()) {
+            case SdkVersion::kP:
+    deny_access = runtime->isChangeEnabled(kHideMaxtargetsdkPHiddenApis);
+              Break;
+            case SdkVersion::kQ:
+    deny_access = runtime->isChangeEnabled(kHideMaxtargetsdkQHiddenApis);
+              Break;
+            Default:
+    deny_access = IsSdkVersionSetAndMoreThan(runtime->GetTargetSdkVersion(), api_list.GetMaxAl lowedSdkVersion());
+    }
+    }
+    }
+
+      If (access_method ! = AccessMethod::kNone) {
+        // Omit code: issue a warning about accessing the hidden API
+
+        // If this access is not denied, move the member to the whitelist and skip
+            // The next time to be accessed by the member in the warning.
+        If (! deny_access) {
+    MaybeUpdateAccessFlags (runtime, member, kAccPublicApi);
+    }
+    }
+
+      return deny_access;
+    }
+    
