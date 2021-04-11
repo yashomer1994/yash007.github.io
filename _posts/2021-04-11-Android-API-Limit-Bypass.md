@@ -292,5 +292,7 @@ Application core accessing system **API**.
 
 ---
 [](#header-6)**Summary**
+
 ---
 
+  This blog is to explain the Restrictions imposed on API , in the next blog i will explain the bypass Technique.
