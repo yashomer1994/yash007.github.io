@@ -78,4 +78,9 @@ To call **ShouldDenyAccessToMember** we use **hiddenapi::ShouldDenyAccessToMembe
     }
     // Omit
     }
-
+ 
+ ---
+ 
+ ---
+ **Analysis**
+ ---
