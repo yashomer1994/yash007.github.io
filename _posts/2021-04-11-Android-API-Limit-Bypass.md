@@ -233,6 +233,7 @@ As per Android Devloper Blogs, this feature disabled in Android Q, and not known
 
 ---
 [](#header-6)**Focus**
+
 ---
 
 Application core accessing system **API**.
@@ -287,4 +288,9 @@ Application core accessing system **API**.
 
       return deny_access;
     }
+
+
+---
+[](#header-6)**Summary**
+---
 
